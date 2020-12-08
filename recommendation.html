@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="login.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
   <body>
@@ -47,22 +46,30 @@
       </div>
   </nav>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <form class="box">
-                    <h1>Login</h1>
-                    <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="" placeholder="Username"> <input type="password" name="" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
-                    <div class="col-md-12">
-                        <ul class="social-network social-circle">
-                            <li><a href="#" class="icoSpotify" title="Login with Spotify"><i class="fa fa-spotify fa-2x"></i></a></li>
-                        </ul>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="container-sm">
+<form>
+  <div class="inner-form ">
+    <div class="input-field">
+    <button class="btn-search" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+    </svg>
+    </button>
+    <input id="search" class="form-control" type="text" placeholder="Type in an album, artist or genre to filter for similar results" value="">
     </div>
+    </div>
+  </form>
+
+<!-- Vue app (app.js) -->
+
+<div class="row mx-2 mt-4" id="albumCards">
+<card-comp
+  v-for="rec_album in rec_albums"
+  v-bind:key="rec_album.id"
+  v-bind:url="rec_album.image"
+  v-bind:album="rec_album.album"
+  v-bind:artist="rec_album.artist"
+></card-comp>
 </div>
 
     <!-- Optional JavaScript -->
