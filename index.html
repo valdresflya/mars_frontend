@@ -63,148 +63,16 @@
     </div>
   </form>
 
-  <div class="row mx-2" id="albumCards">
-  <card-comp
+<!-- Vue app (app.js) -->
+
+<div class="row mx-2 mt-4" id="albumCards">
+<card-comp
   v-for="rec_album in rec_albums"
   v-bind:key="rec_album.id"
   v-bind:url="rec_album.image"
   v-bind:title="rec_album.band"
 ></card-comp>
 </div>
-
-<!--<div class="card-deck ml-2 mr-2 fade-in is-visible">
-    
-  <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-    <div class="card mb-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b273fb67a36bb6bcf4178cbaf643" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{tweet.band}}</h5>
-      </div>
-    </div>
-  </div>  
-  
-  <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text text-inline">Genre: Rock</p>
-        <p class="card-text text-inline">Rating: 98%</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b273a6fbff4a9a0d88fbc5c0f010" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b273fb67a36bb6bcf4178cbaf643" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b273400b0756273d1168643d8891" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-  </div>
-  <div class="card-deck ml-2 mr-2 fade-in">
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-  </div>
-  <div class="card-deck ml-2 mr-2 fade-in">
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-  </div>
-  <div class="card-deck ml-2 mr-2 fade-in">
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-    <div class="card mt-3">
-      <img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Band name - Album title</h5>
-        <p class="card-text">Genre: Rock</p>
-      </div>
-    </div>
-  </div>
-</div>
--->
 
 </div>
 

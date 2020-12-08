@@ -79,7 +79,7 @@ const rec_albums = [
 
 Vue.component('card-comp', {
   props: ['title','url'],
-  template: '<div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card mb-3"><img class="card-img-top" :src="url" alt="Card image cap"><div class="card-body"><h5 class="card-title">{{title}}</h5></div></div></div>'
+  template: '<div class="col-12 col-sm-6 col-lg-4 col-xl-3"><div class="card mb-3 fade-in"><img class="card-img-top" :src="url" alt="Card image cap"><div class="card-body"><h5 class="card-title">{{title}}</h5></div></div></div>'
 })
 
 albumVue = new Vue({
