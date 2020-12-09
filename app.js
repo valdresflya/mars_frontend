@@ -43,19 +43,19 @@ const rec_albums = [
   },
   {
     id: 1,
-    image:"https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42",
+    image:"https://i.scdn.co/image/ab67616d0000b2737ed87984e7f39ba42ee1b50a    ",
     artist:"A band",
     album:"An album"
   },
   {
     id: 1,
-    image:"https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42",
+    image:"https://i.scdn.co/image/ab67616d0000b273a4987d73b0fea544ed75c571",
     artist:"A band",
     album:"An album"
   },
   {
     id: 1,
-    image:"https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42",
+    image:"https://i.scdn.co/image/ab67616d0000b273ac79283ccb6d08af31fd33d8",
     artist:"A band",
     album:"An album"
   },
