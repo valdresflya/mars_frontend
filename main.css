@@ -106,7 +106,7 @@ body {
   
   .album-card {
     border-radius: 30px;
-    border: 0;
+    border: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     font-size: 20px;
     transition: all linear 0.25s;
@@ -114,8 +114,6 @@ body {
 
   .album-card img {
     border-radius: 30px;
-    filter:  ;
-    -webkit-filter:;
 }
 
   .album-card:hover {
