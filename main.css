@@ -1,6 +1,6 @@
 :root {
   --fc: #264653;
-  --sc: #2a9d8f;
+  --sc: #ffffff;
   --fac: #e9c46a;
   --sac: #f4a261;
   --mc: #e76f51;
@@ -167,6 +167,8 @@ body {
   position: absolute;
   padding: 0;
   margin: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10%;
   top: 10px;
   left: 30px;
   color: #FFF;
@@ -192,13 +194,13 @@ body {
 
 .fa-spotify {
   height: 70px;
-  color: white;
+  color: var(--spf);
 }
 
 .fa-spotify:hover {
   height: 70px;
   transition: all linear 0.25s;
-  color: var(--spf);
+  color: var(--sc);
 }
 
 
