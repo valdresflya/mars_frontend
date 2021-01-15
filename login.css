@@ -1,0 +1,134 @@
+:root {
+    --fc: #264653;
+    --sc: #ffffff;
+    --fac: #e9c46a;
+    --sac: #f4a261;
+    --mc: #e76f51;
+    --spf: #1DB954;
+    --text: #ffffff
+  }
+
+.text-login {
+    color: var(--sc)
+}
+
+.box {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--fc);
+    text-align: center;
+    transition: 0.5s;
+    margin-top: 100px
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--sc);
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+@media screen and (max-width: 767px) {
+    .box {
+        width: 340px;
+        padding: 40px;
+        margin: auto;
+        margin-top: 100px;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, 0%);
+        background: var(--fc);
+        text-align: center;
+        transition: 0.5s;
+    }
+ }
+
+.box h1 {
+    color: var(--fac);
+    text-transform: uppercase;
+    font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 300px;
+    border-color: var(--spf);
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--spf);
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+    background: var(--spf);
+}
+
+.forgot {
+    text-decoration: underline
+}
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0 5px
+}
+
+
+
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px
+}
+
+.social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+    color: var(--spf);
+}
+
+.social-circle i {
+    color: #fff;
+    transition: all 0.8s;
+    transition: all 0.8s
+}

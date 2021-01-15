@@ -1,30 +1,211 @@
-.bg-cover {
-  padding-top: 1px;
-  background:rgb(255, 255, 255);
+:root {
+  --fc: #264653;
+  --sc: #ffffff;
+  --fac: #e9c46a;
+  --sac: #f4a261;
+  --mc: #e76f51;
+  --text: #ffffff;
+  --spf: #1DB954;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, #e5f8ff, var(--fc));
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
 
+.content {
+  margin-top: 75px;
+}
+
+.navbar-custom {
+  background-color: var(--fc);
+  color: var(--text);
+}
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text, 
+.navbar-custom .nav-link{ 
+  transition: all linear 0.15s;
+  color: var(--text);
+} 
+
+.navbar-custom .nav-item.active .nav-link{
+  transition: all linear 0.15s;
+  color: var(--fac)
+  }
+.navbar-custom .nav-link:hover{
+  transition: all linear 0.15s;
+  color: var(--sc)
+  }
+
+.navbar-custom .navbar-brand{
+  font-style: bold;
+  transition: all linear 0.15s;
+  color: var(--fac);
+}
+
+.navbar-custom .navbar-brand:hover{
+  transition: all linear 0.15s;
+  color: var(--sc);
+}
+
+.custom-toggler.navbar-toggler:hover .navbar-toggler-icon {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.navbar-custom .navbar-toggler-icon { 
+  background-image: url("https://www.flaticon.com/svg/static/icons/svg/599/599193.svg");
+}
+
+/* fader.js animation */
 
 .fade-in {
-    opacity: 0;
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 0.4s ease-out, transform 0.7s ease-out;
+    opacity: 0.5;
+    transform: translateX(-10vh);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     will-change: opacity, visibility;
   }
-  .fade-in.is-visible {
+  .fade-in.in-view {
     opacity: 1;
     transform: none;
-    visibility: visible;
   }
 
-  .card {
-    border: 0;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) ;
+
+  
+  .album-card {
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transition: all linear 0.25s;
   }
+
+  .album-card img {
+    border-radius: 30px;
+}
+
+  .album-card:hover {
+    transition: all linear 0.25s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+  .album-card:hover img {
+    transition: all linear 0.25s;
+}
+
+.album-text {
+  position:absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 130px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 30px 30px;
+  transition: all linear 0.25s;
+}
+
+.album-card:hover .album-text{
+  transition: all linear 0.25s;
+  height: 140px;
+}
+
+.album-card .album-name {
+  position: absolute;
+  width: 80%;
+  left: 30px;
+  top: 20px;
+  font-size: 30px;
+  color: #FFF;
+  font-weight: bold;
+  transition: all linear 0.25s;
+}
+
+.album-card .artist-name {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all linear 0.25s;
+}
+
+
+.album-card .rating {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10%;
+  top: 10px;
+  left: 30px;
+  color: #FFF;
+  font-size: 45px;
+  font-weight: bold;
+  transition: all linear 0.25s;
+}
+
+.album-card:hover .rating {
+ top: 20px;
+}
+
+.album-card .spotify-icons {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all linear 0.25s;
+}
+
+.album-card:hover .spotify-icons {
+  top: 30px;
+ }
+
+.fa-spotify {
+  height: 70px;
+  color: var(--spf);
+}
+
+.fa-spotify:hover {
+  height: 70px;
+  transition: all linear 0.25s;
+  color: var(--sc);
+}
+
+
+
+/* search field */
 
    form {
     width: 100%;
@@ -58,8 +239,8 @@
     padding: 10px 32px 10px 70px;
     font-size: 18px;
     color: #666;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) ;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); ;
   }
   
    form .inner-form .input-field input.placeholder {
