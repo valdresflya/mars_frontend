@@ -1,79 +1,140 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  </head>
-  <body>
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <nav class="navbar fixed-top navbar-custom navbar-expand-md justify-content-center">
-      <img src="" height="20" class="d-inline-block align-top" alt="">
-      <a href="index.html" class="navbar-brand d-flex w-50 mr-auto ml-2">MARS</a>
-      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
-          <ul class="navbar-nav w-100 justify-content-center">
-              <li class="nav-item">
-                  <a class="nav-link" href="recommendation.html">Recommendation</a>
-              </li>
-              <li class="nav-item active">
-                  <a class="nav-link" href="rating.html">Rating</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="profile.html">Profile</a>
-              </li>
-          </ul>
-          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Sign out</a>
-              </li>
-          </ul>
-      </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar fixed-top navbar-custom navbar-expand-md justify-content-center">
+    <img src="" height="20" class="d-inline-block align-top" alt="">
+    <a href="index.html" class="navbar-brand d-flex w-50 mr-auto ml-2">MARS</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="recommendation.html">Recommendation</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="rating.html">Rating</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
-<div class="container-sm content">
-<form>
-  <div class="inner-form ">
-    <div class="input-field">
-    <button class="btn-search" type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-    </svg>
-    </button>
-    <input id="search" class="form-control" type="text" placeholder="Search for album, artist, genre or year (e.g. genre: punk) " value="">
+  <div class="container-sm content">
+    <form>
+      <div class="inner-form ">
+        <div class="input-field">
+          <button class="btn-search" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+              </path>
+            </svg>
+          </button>
+          <input id="search" class="form-control" type="text" placeholder="Album" value="">
+        </div>
+      </div>
+    </form>
+
+    <!-- Vue app (app.js) -->
+
+    <div class="row mx-2 mt-4" id="albumCards">
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card mb-3 fade-in album-card"><img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
+          <div class="rating">97%</div>
+          <div class="spotify-icons"><a href="#"><i class="fa fa-spotify fa-2x"></i></a></div>
+          <div class="album-text">
+            <div class="album-name">Album</div>
+            <div class="artist-name">Artist</div>`
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card mb-3 fade-in album-card"><img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
+          <div class="rating">97%</div>
+          <div class="spotify-icons"><a href="#"><i class="fa fa-spotify fa-2x"></i></a></div>
+          <div class="album-text">
+            <div class="album-name">Album</div>
+            <div class="artist-name">Artist</div>`
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card mb-3 fade-in album-card"><img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
+          <div class="rating">97%</div>
+          <div class="spotify-icons"><a href="#"><i class="fa fa-spotify fa-2x"></i></a></div>
+          <div class="album-text">
+            <div class="album-name">Album</div>
+            <div class="artist-name">Artist</div>`
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card mb-3 fade-in album-card"><img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
+          <div class="rating">97%</div>
+          <div class="spotify-icons"><a href="#"><i class="fa fa-spotify fa-2x"></i></a></div>
+          <div class="album-text">
+            <div class="album-name">Album</div>
+            <div class="artist-name">Artist</div>`
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+        <div class="card mb-3 fade-in album-card"><img class="card-img-top" src="https://i.scdn.co/image/ab67616d0000b2734ea56ef453ce4f457f6ebd42" alt="Card image cap">
+          <div class="rating">97%</div>
+          <div class="spotify-icons"><a href="#"><i class="fa fa-spotify fa-2x"></i></a></div>
+          <div class="album-text">
+            <div class="album-name">Album</div>
+            <div class="artist-name">Artist</div>`
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-  </form>
 
-<!-- Vue app (app.js) -->
+    
 
-<div class="row mx-2 mt-4" id="albumCards">
-<card-comp
-  v-for="rec_album in rec_albums"
-  v-bind:key="rec_album.id"
-  v-bind:url="rec_album.image"
-  v-bind:album="rec_album.album"
-  v-bind:artist="rec_album.artist"
-></card-comp>
-</div>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <script src="appRat.js"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="fader.js"></script>
+          <!-- Optional JavaScript -->
 
-  </body>
+
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+          </script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+          </script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+          </script>
+          <script src="fader.js"></script>
+          <script src="appRat.js"></script>
+
+</body>
+
 </html>

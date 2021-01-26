@@ -64,8 +64,8 @@
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-    width: 300px;
     border-color: var(--spf);
+    width: 270px;
 }
 
 .box input[type="submit"] {
